@@ -1,0 +1,15 @@
+<section class=" text-center grid place-items-center mt-40">
+    <h1 class="text-white text-5xl">Tired of picking songs to play?</h1>
+    <p class="text-white text-3xl pt-5">Hit the button to play a random song</p>
+</section>
+<section class="grid place-items-center mt-20">
+    <app-button
+    link="/current-song"
+    text="Play a song"
+    ></app-button>
+</section>
+<section class=" text-center grid place-items-center mt-20">
+    <p class="text-white" *ngIf="verifyRole()">
+        Get access to experimental features? <a [routerLink]="['/register', id]" class="text-link-text">Sign up here!</a>
+    </p>
+</section>

@@ -1,0 +1,27 @@
+<section class="grid place-items-center my-20" >
+    <div class="image" [innerHTML]="vid">
+        <!-- <img src="{{datas[0].snippet.thumbnail.default.url}}" alt="album"> -->
+    </div>
+    <div class="text-center mt-10">
+        <p class="title text-white">{{ title[0] }}</p>
+        <!-- <p class="artist-name text-white">artist name</p> -->
+    </div>
+    <!-- <div>
+        <div class="flex justify-between text-white text-xs">
+            <span>0:00</span>
+            <span>3:24</span>
+        </div>
+        <input type="range" name="musicSlider" class="appearance-none h-0.5 rounded-lg cursor-pointer bg-red-400">
+    </div> -->
+</section>
+<section class="text-white ml-20">
+    <h3>Queue</h3>
+    <section>
+        <div class="flex px-5 mb-10" *ngFor="let data of datas; let i = index">
+            <img src="{{datas[i].snippet.thumbnail.def.url}}" alt="album">
+            <div class="px-5 grid place-items-center">
+                <p >{{ datas[i].snippet.title }}</p>
+            </div>
+        </div>
+    </section>
+</section>

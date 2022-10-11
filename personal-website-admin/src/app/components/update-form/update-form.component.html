@@ -1,0 +1,121 @@
+<div class="text-white mt-20 lg:mx-30 md:mx-20 sm:mx-10 xs:mx-3">
+    <h1 class="text-3xl">Welcome Admin!</h1>
+    <div class="mt-10">
+        <form #songForm="ngForm" ngNativeValidate (ngSubmit)="onSongsUpdate();songForm.reset()">
+            <div class="border-8 rounded-md sm:p-5 xs:p-2">
+                <h3 class="text-xl">Snippet</h3>
+                <div class="mt-2 border-4 sm:p-5 xs:p-3 rounded-lg grid">
+                    <label for="title" class="text-lg">Title</label>
+                    <input type="text" name="title" class="outline-none bg-transparent border rounded-md p-2"  [(ngModel)]="title" [value]="song.snippet.title" required>
+                </div>
+                <div class="mt-3 border-4 rounded-lg p-5 ">
+                    <h6 class="text-lg">Thumbnail</h6>
+                    <div class="sm:ml-3 flex flex-wrap justify-evenly">
+                        <div class="mt-5 border-2 sm:p-5 xs:p-3 rounded-lg">
+                            <h6 class="text-md">Default</h6>
+                            <div>
+                                <div class="flex justify-between mt-3">
+                                    <label for="url">Url</label>
+                                    <input type="text" class="ml-2 w-100 outline-none bg-transparent border rounded-md p-2" name="defUrl"  [(ngModel)]="defUrl" required>
+                                </div>
+                                <div class="flex justify-between mt-3">
+                                    <label for="width">Width</label>
+                                    <input type="number" class="ml-2 w-100 outline-none bg-transparent border rounded-md p-2 appearance-none" onSubmit="this.value=''" name="defWidth"  [(ngModel)]="defWidth" required>
+                                </div>
+                                <div class="flex justify-between mt-3">
+                                    <label for="height">Height</label>
+                                    <input type="number" class="ml-2 w-100 outline-none bg-transparent border rounded-md p-2 appearance-none" name="defHeight"  [(ngModel)]="defHeight" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 border-2 sm:p-5 xs:p-3 rounded-lg">
+                            <h6 class="text-md">Medium</h6>
+                            <div>
+                                <div class="flex justify-between mt-3">
+                                    <label for="url">Url</label>
+                                    <input type="text" class="ml-2 w-100 outline-none bg-transparent border rounded-md p-2" name="mediumUrl"  [(ngModel)]="mediumUrl" required>
+                                </div>
+                                <div class="flex justify-between mt-3">
+                                    <label for="width">Width</label>
+                                    <input type="number" class="ml-2 w-100 outline-none bg-transparent border rounded-md p-2 appearance-none" name="mediumWidth"  [(ngModel)]="mediumWidth" required>
+                                </div>
+                                <div class="flex justify-between mt-3">
+                                    <label for="height">Height</label>
+                                    <input type="number" class="ml-2 w-100 outline-none bg-transparent border rounded-md p-2 appearance-none" name="mediumHeight"  [(ngModel)]="mediumHeight" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 border-2 sm:p-5 xs:p-3 rounded-lg">
+                            <h6 class="text-md">High</h6>
+                            <div>
+                                <div class="flex justify-between mt-3">
+                                    <label for="url">Url</label>
+                                    <input type="text" class="ml-2 w-100 outline-none bg-transparent border rounded-md p-2" name="highUrl"  [(ngModel)]="highUrl" required>
+                                </div>
+                                <div class="flex justify-between mt-3">
+                                    <label for="width">Width</label>
+                                    <input type="number" class="ml-2 w-100 outline-none bg-transparent border rounded-md p-2 appearance-none" name="highWidth"  [(ngModel)]="highWidth" required>
+                                </div>
+                                <div class="flex justify-between mt-3">
+                                    <label for="height">Height</label>
+                                    <input type="number" class="ml-2 w-100 outline-none bg-transparent border rounded-md p-2 appearance-none" name="highHeight"  [(ngModel)]="highHeight" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 border-2 sm:p-5 xs:p-3 rounded-lg">
+                            <h6 class="text-md">Standard</h6>
+                            <div>
+                                <div class="flex justify-between mt-3">
+                                    <label for="url">Url</label>
+                                    <input type="text" class="ml-2 w-100 outline-none bg-transparent border rounded-md p-2" name="standardUrl"  [(ngModel)]="standardUrl">
+                                </div>
+                                <div class="flex justify-between mt-3">
+                                    <label for="width">Width</label>
+                                    <input type="number" class="ml-2 w-100 outline-none bg-transparent border rounded-md p-2 appearance-none" name="standardWidth"  [(ngModel)]="standardWidth">
+                                </div>
+                                <div class="flex justify-between mt-3">
+                                    <label for="height">Height</label>
+                                    <input type="number" class="ml-2 w-100 outline-none bg-transparent border rounded-md p-2 appearance-none" name="standardHeight"  [(ngModel)]="standardHeight">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mt-5 border-2 sm:p-5 xs:p-3 rounded-lg">
+                            <h6 class="text-md">Max resolution</h6>
+                            <div>
+                                <div class="flex justify-between mt-3">
+                                    <label for="url">Url</label>
+                                    <input type="text" class="ml-2 w-100 outline-none bg-transparent border rounded-md p-2" name="maxUrl"  [(ngModel)]="maxUrl">
+                                </div>
+                                <div class="flex justify-between mt-3">
+                                    <label for="width">Width</label>
+                                    <input type="number" class="ml-2 w-100 outline-none bg-transparent border rounded-md p-2 appearance-none" name="maxWidth"  [(ngModel)]="maxWidth">
+                                </div>
+                                <div class="flex justify-between mt-3">
+                                    <label for="height">Height</label>
+                                    <input type="number" class="ml-2 w-100 outline-none bg-transparent border rounded-md p-2 appearance-none" name="maxHeight"  [(ngModel)]="maxHeight">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <div class="border-8 rounded-md p-5 mt-3">
+                <h3 class="text-xl">Player</h3>
+                <div class="mt-2 border-4 p-5 rounded-lg grid ml-3">
+                    <label for="embedHtml">Embed HTML</label>
+                    <input type="text" name="embedHtml" class="outline-none bg-transparent border rounded-md p-2" [(ngModel)]="embedHtml" required>
+                </div>
+            </div>
+            <div class="mt-5 flex justify-end">
+                <input 
+                type="submit" 
+                value="Update" 
+                class="bg-button-white text-black text-3xl p-5 rounded-md">
+            </div>
+        </form>
+    </div>
+</div>
+
+

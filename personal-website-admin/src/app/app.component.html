@@ -1,0 +1,34 @@
+<div class="bg-nav-grey py-5 brand text-white flex justify-between">
+    <span class="nav-brand text-white mx-10 text-4xl">
+        <a routerLink="/">puzzels</a>
+    </span>
+    <button *ngIf="this.userService.isLoggedIn()" class="mr-5" (click)="onLogout()">Log out
+    </button>
+</div>
+<!-- <div class="sm:grid grid-cols-12 text-center">
+    <nav class="text-white">
+        <div class="border-r-2 border-t-2">
+            <a routerLink="/" >
+                <div class="p-10 border-b-2">
+                    <fa-icon [icon]="faMusic" class="text-3xl"></fa-icon>
+                </div>
+            </a>
+            <a routerLink="/add" >
+                <div class="p-10 border-b-2">
+                    <fa-icon [icon]="faPlus" class="text-4xl"></fa-icon>
+                </div>
+            </a>
+        </div>
+    </nav>
+    <main class="col-span-11 text-white">
+        <router-outlet></router-outlet>
+    </main>
+</div> -->
+<main>
+    <!-- <router-outlet name="sidebar"></router-outlet> -->
+    <router-outlet></router-outlet>
+</main>
+<footer class="bg-nav-grey text-center text-white py-5 mt-20">
+    <span class="nav-brand">puzzles </span>
+    <span>&copy; 2022</span>
+</footer>

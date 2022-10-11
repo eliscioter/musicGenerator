@@ -1,0 +1,39 @@
+<div class="sm:grid grid-cols-12 text-white">
+    <section class="grid place-items-center col-span-4">
+        <div class="border rounded px-20 my-5">
+            <div class="border-b">
+                <h1 class="text-4xl text-center p-5">Register</h1>
+            </div>
+            <div class="mb-10 mt-5">
+                <form #registerForm="ngForm" ngNativeValidate (ngSubmit)="onRegister();registerForm.reset()">
+                    <div class="grid py-2 px-5" >
+                        <label for="username">Username</label>
+                        <input type="text" name="username" value="{{ this.username }}" class="w-full p-2 border border-slate-50 rounded text-lg bg-transparent outline-none" [(ngModel)]="username" required>
+                    </div>
+                    <div *ngIf="!(this.userService.isLoggedIn())">
+                        <div class="grid py-2 px-5" >
+                            <label for="password">Password</label>
+                            <input type="password" name="pasword" class="w-full p-2 border border-slate-50 rounded text-lg bg-transparent outline-none" [(ngModel)]="password" required>
+                        </div>
+                        <div class="grid py-2 px-5" >
+                            <label for="re-password">Retype password</label>
+                            <input type="password" name="re-password" class="w-full p-2 border border-slate-50 rounded text-lg bg-transparent outline-none" [(ngModel)]="re_password" required>
+                        </div>
+                    </div>
+                    <div class="py-2">
+                        <input 
+                        type="submit" 
+                        value="Submit" 
+                        class="bg-button-white text-black text-xl w-full py-3 font-bold rounded-md">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section class="col-span-8 text-white">
+        <app-customer *ngIf="role === 'user'; else beta"></app-customer>
+        <ng-template #beta>
+            <app-beta-tester></app-beta-tester>
+        </ng-template>
+    </section>
+</div>

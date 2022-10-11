@@ -1,0 +1,24 @@
+<div class="sm:grid grid-cols-12 text-center">
+    <app-nav></app-nav>
+    <div class="text-white flex flex-wrap justify-evenly mt-20 col-span-11">
+        <div class="container border rounded-lg p-5 mb-5 mx-0.5 max-w-xs" *ngFor="let item of songs; let i = index">
+            <div class="flex justify-end">
+                <a [routerLink]="['/update-form', songs[i]._id]" class="mx-3">
+                    <fa-icon [icon]="faEdit" ></fa-icon>
+                </a>
+                <fa-icon 
+                [icon]="faTrash" 
+                (click)="onDelete(item)"
+                class="cursor-pointer">
+            </fa-icon>
+            </div>
+            <div class="grid place-items-center" >
+                <img src="{{ songs[i].snippet.thumbnail.high.url }}" alt="" class="max-w-full max-h-auto">
+                <div class="ml-3 self-center">
+                    <span>{{ songs[i].snippet.title }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

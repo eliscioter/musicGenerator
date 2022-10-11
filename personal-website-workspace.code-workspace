@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "personal-website"
+		},
+		{
+			"path": "personal-website-backend"
+		},
+		{
+			"path": "personal-website-admin"
+		}
+	],
+	"settings": {}
+}

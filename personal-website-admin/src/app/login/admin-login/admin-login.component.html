@@ -1,0 +1,21 @@
+<div class="grid place-items-center text-white">
+    <div class="my-20 border border-slate-50 rounded p-10">
+        <form #userForm="ngForm" ngNativeValidate (ngSubmit)="onLogin()">
+            <div class="grid">
+                <label for="username">Username</label>
+                <input type="text" name="username"  class="outline-none bg-transparent border border-slate-100 rounded-md p-1" [(ngModel)]="username" required>
+            </div>
+            <div class=" grid mt-5">
+                <label for="password">Password</label>
+                <input type="password" name="password" class="outline-none bg-transparent border border-slate-100 rounded-md p-1" [(ngModel)]="password" required>
+            </div>
+            <div class="grid place-items-center mt-10">
+                <input 
+                type="submit" 
+                value="Submit" 
+                class="bg-button-white text-black text-xl w-full py-3 font-bold rounded-md">
+            </div>
+        </form>
+    </div>
+</div>
+

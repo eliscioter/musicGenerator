@@ -1,0 +1,23 @@
+<nav class="bg-nav-grey py-5 brand text-white flex justify-between">
+        <div class="my-auto">
+            <span class="nav-brand text-white mx-10 text-4xl">
+                <a routerLink="/">puzzels</a>
+            </span>
+            <a *ngIf="this.userService.isLoggedIn()" routerLink="/playlist" class="mr-10">Playlist</a>
+            <a routerLink="/current-song/lyrics" *ngIf="verifyRole()">Lyrics</a>
+        </div>
+        <div class="mr-5 my-auto">
+            <button *ngIf="this.userService.isLoggedIn(); else SignIn" (click)="onLogout()">Sign out</button>
+            <ng-template #SignIn>
+                <button mat-button (click)="openDialog()">Sign in</button>
+            </ng-template>
+        </div>
+        
+</nav>
+<main>
+    <router-outlet></router-outlet>
+</main>
+<footer class="bg-nav-grey text-center text-white py-5 mt-20">
+    <span class="nav-brand">puzzles </span>
+    <span>&copy; 2022</span>
+</footer>

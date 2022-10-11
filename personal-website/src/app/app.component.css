@@ -1,0 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Orbitron|Anonymous+Pro&display=swap');
+.nav-brand {
+  /* font-family: 'Orbitron', monospace; */
+  font-family: 'Orbitron';
+}
+main, footer {
+  font-family: 'Anonymous Pro';
+}

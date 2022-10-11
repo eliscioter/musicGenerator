@@ -1,0 +1,17 @@
+div input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    background-color: #fff !important;
+    height: 14px;
+    width: 14px;
+    border-radius: 100%;
+    cursor: grab;
+}
+
+/* input[type="range"]::-webkit-slider-runnable-track {
+    cursor: pointer;
+    background-color: #fff;
+    border-radius: 30px;
+    height:1px;
+    width: 100%;
+    margin-top: 10px;
+} */
